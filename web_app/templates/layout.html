@@ -27,18 +27,42 @@
     <div class="container">
       <div id="nav">
         {% block nav %}
-          <h1><a href="/">My Starter Web App</a></h1>
-          <ul>
-            <li><a href="/hello">Hello Page</a></li>
-            <li><a href="/products">Products Page</a></li>
-            <li><a href="/products/new">New Product Form</a></li>
-          </ul>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="index.html">BootStrap Legal</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="chat.html">Chat with Lawyer<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">tbd</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">tbd</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         {% endblock %}
       </div>
       <hr>
 
       <!-- PAGE CONTENTS -->
       <div id="content">
+        <br>
+        <br>
         {% block content %}
         {% endblock %}
       </div>
@@ -46,7 +70,7 @@
       <!-- FOOTER -->
       <div id="footer">
         <hr>
-        &copy; Copyright 2019 Prof. MJ Rossetti |
+        &copy; Copyright 2020 BS Legal |
         <a href="https://github.com/prof-rossetti/web-app-starter-flask">source</a>
       </div>
     </div>
