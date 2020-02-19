@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  <title>New Product | Example Web App</title>
+{% endblock %}
+
+{% block content %}
+  <h2>New Product Form</h2>
+  <p>Please fill-in the form below...</p>
+
+  <form action="/sendemail" method="POST">
+    <label>Email Address</label>
+    <input type="text" name="email_address" placeholder="hello@gmail.com" value="hello@gmail.com">
+
+    <button>Submit</button>
+  </form>
+{% endblock %}
