@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block content %}
-  <h2>New Product Form</h2>
-  <p>Please fill-in the form below...</p>
+  <h2>Contact one of our entrepreneurial law experts</h2>
+  <p>Please ask us a question!</p>
 
   <form action="/sendemail" method="POST">
     <label>Email Address</label>
     <input type="text" name="email_address" placeholder="hello@gmail.com" value="hello@gmail.com">
-
+    <label>What is your problem?</label>
+    <input type="text" name="inquiry" placeholder="What can we help you with?" value="What can we help you with?">
     <button>Submit</button>
   </form>
 {% endblock %}

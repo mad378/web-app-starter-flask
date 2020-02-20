@@ -12,7 +12,7 @@ load_dotenv()
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY", "OOPS, please set env var called 'SENDGRID_API_KEY'")
 MY_ADDRESS = os.environ.get("MY_EMAIL_ADDRESS", "OOPS, please set env var called 'MY_EMAIL_ADDRESS'")
 
-@new_routes.route('/myform')
+@new_routes.route('/chat.html')
 def myform():
     print("VISITING THE FORM")
     return render_template("myformpage.html")
@@ -23,6 +23,7 @@ def sendemail():
     print("FORM DATA:", dict(request.form))
     #return jsonify(request.form)
     email_address = request.form["email_address"]
+    body = request.form["inquiry"]
     #product_name = request.form["product_name"]
 
 
@@ -32,7 +33,7 @@ def sendemail():
 
     subject = "Testing 1,2,3..."
 
-    html_content = "Hello World"
+    html_content = body
     print("HTML:", html_content)
 
     message = Mail(from_email=MY_ADDRESS, to_emails=email_address, subject=subject, html_content=html_content)
@@ -66,6 +67,5 @@ def sendemail():
 
 
 
-
     flash(f"Sent email to {email_address}", "success") # use the "success" category to correspond with twitter bootstrap alert colors
-    return redirect("/myform")
+    return redirect("/chat.html")
