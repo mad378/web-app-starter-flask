@@ -3,7 +3,7 @@ from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
 
-@home_routes.route("/index.html")
+@home_routes.route("/")
 def index():
     print("VISITING THE INDEX PAGE")
     #return "You have visited the homepage"
