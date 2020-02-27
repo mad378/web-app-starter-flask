@@ -31,7 +31,7 @@ def sendemail():
     client = SendGridAPIClient(SENDGRID_API_KEY) #> <class 'sendgrid.sendgrid.SendGridAPIClient>
     print("CLIENT:", type(client))
 
-    subject = "Testing 1,2,3..."
+    subject = "Legal Inquiry"
 
     html_content = body
     print("HTML:", html_content)
